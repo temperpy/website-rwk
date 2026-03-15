@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWK Ergebnisse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Topbar ──────────────────────────────────────────────────────────── -->
+  <header id="topbar">
+    <button id="sidebar-toggle" aria-label="Menü ein-/ausblenden" title="Menü">&#9776;</button>
+    <button id="topbar-title">RWK Ergebnisse</button>
+    <div id="search-wrapper">
+      <input id="search" type="search" placeholder="Mannschaft suchen …" autocomplete="off">
+    </div>
+  </header>
+
+  <!-- ── Layout ──────────────────────────────────────────────────────────── -->
+  <div id="layout">
+
+    <!-- Sidebar-Overlay (nur Mobile) -->
+    <div id="overlay"></div>
+
+    <!-- Navigation-Sidebar -->
+    <nav id="sidebar">
+      <div id="nav-tree"></div>
+    </nav>
+
+    <!-- Hauptbereich -->
+    <main id="content">
+      <div id="welcome">
+        <div id="welcome-icon">&#127919;</div>
+        <h2>Willkommen</h2>
+        <p>Wähle links eine Mannschaft aus, um die Ergebnisdiagramme anzuzeigen.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ── Lightbox ────────────────────────────────────────────────────────── -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Diagramm-Vollansicht">
+    <button id="lightbox-close" aria-label="Schließen">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
